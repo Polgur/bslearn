@@ -1,0 +1,9 @@
+/*font-family: 'Open Sans', sans-serif;*/
+.block{
+	background: #eee;
+	border: 1px solid #ccc;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
