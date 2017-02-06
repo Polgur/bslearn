@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Часть 1 - Урок 4{% endblock %}
+{% block les_styles %}
+  <link href="{% static "css_les/p1l4.css" %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Обтекания</h3>
+      </div>
+    </div>
+  </div>
+  <!-- Пример обтеканий-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-6 block">1</div>
+      <div class="col-sm-6 col-md-4 block">2</div>
+      <div class="clearfix visible-sm-block">Обтекание</div> <!-- Responsive utilities -->
+      <div class="col-md-2 block">3</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Второй пример</h3>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-3 block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque laborum praesentium quam reiciendis.
+          Accusamus assumenda atque dolor dolorum, ea eius minus nostrum, nulla pariatur, qui similique sint tempore
+          temporibus. A aliquid architecto aspernatur assumenda dicta dignissimos dolorum earum eos illo ipsam odio odit
+          omnis praesentium, saepe sint unde voluptatem? Impedit!</p>
+      </div>
+      <div class="col-sm-6 col-md-3 block">2</div>
+      <div class="clearfix visible-sm-block"></div>
+      <div class="col-sm-6 col-md-3 block">3</div>
+      <div class="col-sm-6 col-md-3 block">4</div>
+    </div>
+  </div>
+
+{% endblock %}

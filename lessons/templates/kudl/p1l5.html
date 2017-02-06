@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Часть 1 - Урок 5{% endblock %}
+{% block les_styles %}
+  <link href="{% static "css_les/p1l4.css" %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Отступы</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 block">1</div>
+      <div class="col-md-4 col-md-offset-4 block">2</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Вложенные колонки</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-push-4 block">
+        Content
+        <div class="row">
+          <div class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, fugit.
+            <hr class="visible-xs-block"></div>
+          <div class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, dolores!
+            <hr class="visible-xs-block"></div>
+          <div class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, officiis.
+            <hr class="visible-xs-block"></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-pull-8 block">
+        <h3>Sidebar</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et illo, vero. A alias, aspernatur beatae commodi
+          consequatur corporis culpa eveniet illo ipsa nam nemo non omnis placeat quam quas sapiente tempora. Delectus
+          dicta dolore facere itaque iure maxime minus nobis quod vel voluptate? A ad dicta dolorum est facere modi
+          molestiae nisi officiis quis quos! Accusamus ad aperiam consequatur consequuntur dignissimos distinctio
+          eveniet exercitationem facere fuga harum impedit itaque iusto laudantium molestiae mollitia nihil nostrum
+          numquam, officia optio pariatur perspiciatis, quaerat quas quasi quia quidem quos reprehenderit similique
+          tempore ut vel? At aut, esse laudantium necessitatibus obcaecati omnis voluptates. Temporibus!</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Третий пример</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="block clearfix">
+      <p class="pull-left">hello</p>
+      <p class="pull-right">world</p>
+    </div>
+  </div>
+{% endblock %}
