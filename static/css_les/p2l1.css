@@ -1,9 +1,153 @@
 /*font-family: 'Open Sans', sans-serif;*/
-.block{
-	background: #eee;
-	border: 1px solid #ccc;
+body {
+    background: #ececec;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    min-width: 320px;
 }
+
 img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.btn-red {
+    background: #d51e08;
+    color: #ffffff;
+}
+
+.btn-red:hover {
+    background: #ec4835;
+}
+
+/* ==================================================HEADER==========================================================*/
+.menu-top .navbar {
+    margin-bottom: 0;
+    background: #ffffff;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+.menu-top .navbar-default .navbar-nav > li > a {
+    color: #000;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    transition: background .3s; /* замедление background кнопки при наведении*/
+}
+
+.menu-top .navbar-default .navbar-nav > li > a:hover {
+    text-decoration: underline;
+}
+
+.menu-top .navbar-default .navbar-nav > li > a.btn-red {
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 5px 20px;
+}
+
+.menu-top .navbar-default .navbar-nav > li > a.btn-red:hover {
+    background: #ec4835;
+    text-decoration: none;
+}
+
+.menu-top .navbar-default .navbar-nav > li > a > .glyphicon {
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+.menu-top .container,
+.menu-top .navbar-collapse {
+    padding-left: 0;
+}
+
+.flag {
+    margin-right: 5px;
+    position: relative;
+    top: -1px;
+}
+
+.menu-carousel .item {
+    min-height: 600px;
+}
+
+.menu-carousel .bgslide {
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel.fade {
+    opacity: 1;
+}
+
+.carousel.fade .item {
+    opacity: 0;
+    transition: opacity .5s;
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel.fade .item.active {
+    opacity: 1;
+    position: relative;
+}
+
+.menu-carousel .carousel-caption {
+    left: 0;
+    top: 150px;
+}
+
+.menu-carousel .carousel-caption h1 {
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.menu-carousel .carousel-caption h3 {
+    font-size: 30px;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    .menu-top .navbar-nav {
+        float: none !important;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 767px) {
+    .menu-top .navbar-default .navbar-nav > li > a:hover {
+        background: #eee;
+    }
+
+    .menu-top .container,
+    .menu-top .navbar-collapse {
+        padding-left: 15px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+
 }
