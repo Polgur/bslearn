@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block title %}Часть 2 - Урок 1{% endblock %}
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
 {% block les_styles %}
   <link href="{% static "css_les/p2l1.css" %}" rel="stylesheet">
 {% endblock %}
@@ -17,7 +17,7 @@
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    data-target="#menu-top" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -26,7 +26,7 @@
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="collapse navbar-collapse" id="menu-top">
             <ul class="nav navbar-nav">
               <li><a href="#">Support</a></li>
               <li><a href="#">Free Shipping Over $50</a></li>
@@ -34,7 +34,7 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <span class="flag"><img src="{% static "img/kudl2/flag.jpg" %}" alt=""></span>English <span
-                    class="caret"></span></a>
+                        class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#"><span class="flag"><img src="{% static "img/kudl2/flag.jpg" %}" alt=""></span> France</a>
                   </li>
@@ -69,12 +69,61 @@
 
     <section class="menu-carousel">
       <div id="carousel" class="carousel fade" data-ride="carousel">
+
+        <div class="main-menu">
+          <nav class="navbar navbar-inverse">
+            <div class="container">
+              <div class="main-menu-bg">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                          data-target="#main-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#"><img src="{% static "img/kudl2/logo.png" %}" alt="stypetour"><span>StyleTour</span></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="main-menu">
+                  <ul class="nav navbar-nav">
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Sale</a></li>
+                  </ul>
+
+                  <div class="nav navbar-nav navbar-right">
+                    <form class="navbar-form navbar-left" role="search" method="get" action="">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+												<button type="submit" class="btn btn-default" name="go">
+                          <i class="glyphicon glyphicon-search"></i></button>
+											</span>
+                      </div>
+                    </form>
+                  </div>
+                </div><!-- /.navbar-collapse -->
+                <i class="search glyphicon glyphicon-search"></i>
+              </div><!-- /.main-menu-bg -->
+            </div><!-- /.container -->
+          </nav>
+        </div> <!-- /.main-menu -->
+
+
         <!-- Indicators -->
 
         <div class="carousel-indicators-wrap">
           <ol class="carousel-indicators">
             <li data-target="#carousel" data-slide-to="0" class="active"></li>
             <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+            <li data-target="#carousel" data-slide-to="3"></li>
           </ol>
         </div>  <!-- ./carousel-indicators-wrap -->
 
@@ -82,18 +131,42 @@
         <div class="carousel-inner" role="listbox">
           <div class="item active">
             <div class="bgslide" style="background-image: url({% static "img/kudl2/slider.jpg" %});"></div>
-            <div class="carousel-caption">
-              <h1>Women's Apparel</h1>
-              <h3>T-Shirts, Dress Shirts, Tanks, Pants and More...</h3>
-              <a href="#" class="btn-red">Shop Women’s Apparel</a>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Women's Apparel</h1>
+                <h3>T-Shirts, Dress Shirts, Tanks, Pants and More...</h3>
+                <a href="#" class="btn-red">Shop Women’s Apparel</a>
+              </div>
             </div>
           </div>
           <div class="item">
             <div class="bgslide" style="background-image: url({% static "img/kudl2/slider.jpg" %});"></div>
-            <div class="carousel-caption">
-              <h1>Women's Apparel 2</h1>
-              <h3>T-Shirts, Dress Shirts, Tanks, Pants and More...</h3>
-              <a href="#" class="btn-red">Shop Women’s Apparel</a>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Women's Apparel 2</h1>
+                <h3>T-Shirts, Dress Shirts, Tanks, Pants and More...</h3>
+                <a href="#" class="btn-red">Shop Women’s Apparel</a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="bgslide" style="background-image: url({% static "img/kudl2/slider.jpg" %});"></div>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Women's Apparel 3</h1>
+                <h3>T-Shirts, Dress Shirts, Tanks, Pants and More...</h3>
+                <a href="#" class="btn-red">Shop Women’s Apparel</a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="bgslide" style="background-image: url({% static "img/kudl2/slider.jpg" %});"></div>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Women's Apparel 4</h1>
+                <h3>T-Shirts, Dress Shirts, Tanks, Pants and More...</h3>
+                <a href="#" class="btn-red">Shop Women’s Apparel</a>
+              </div>
             </div>
           </div>
         </div>
@@ -111,6 +184,356 @@
     </section>
 
   </header>
+
+  <section class="main-slogan">
+    <div class="container">
+      <h1>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, laborum?
+      </h1>
+    </div>
+  </section>
+
+  <section class="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-md-push-3">
+          <div class="content">
+            <h3>Items on Demand</h3>
+            <div class="products-row clearfix">
+              <div class="col-sm-4">
+                <div class="product">
+                  <div>
+                    <div class="products-favorites">
+                      <span class="glyphicon glyphicon-heart"></span>
+                    </div><!-- /.products-favorites -->
+                    <div class="product-img">
+                      <a href="#"><img src="{% static "img/kudl2/goods1.jpg" %}" alt=""></a>
+                    </div>
+                    <p class="product-title"><a href="#">CREAM JANE JEANS DRESS</a></p>
+                    <p class="product-desc">Signature NYX cosmetics Signature NYX cosmeticsSignature NYX cosmetics</p>
+                    <div class="product-buy">
+                      <p class="product-price">
+                        Price: $10.00
+                      </p>
+                      <a class="btn btn-default" href="#">add to cart</a>
+                    </div><!-- /.product-buy -->
+                  </div>
+                </div><!-- /.product -->
+              </div>
+              <div class="col-sm-4">
+                <div class="product">
+                  <div class="product-sale img-circle">
+                    <span>Sale</span>
+                  </div><!-- /.products-sale -->
+                  <div class="product-img">
+                    <a href="#"><img src="{% static "img/kudl2/goods2.jpg" %}" alt=""></a>
+                  </div>
+                  <p class="product-title"><a href="#">CREAM SISSI TUNIC</a></p>
+                  <p class="product-desc">Lightweight with just a hint of sheer color, this hydrating</p>
+                  <div class="product-buy">
+                    <p class="product-price">
+                      Price: $20.00
+                    </p>
+                    <a class="btn btn-default" href="#">add to cart</a>
+                  </div><!-- /.product-buy -->
+                </div><!-- /.product -->
+              </div>
+              <div class="col-sm-4">
+                <div class="product">
+                  <div class="products-favorites">
+                    <span class="glyphicon glyphicon-heart"></span>
+                  </div><!-- /.products-favorites -->
+                  <div class="product-img">
+                    <a href="#"><img src="{% static "img/kudl2/goods3.jpg" %}" alt=""></a>
+                  </div>
+                  <p class="product-title"><a href="#">big doodle shawl - blue/black</a></p>
+                  <p class="product-desc">Lightweight with just a hint of sheer color, this hydrating Lightweight with
+                    just a hint of sheer color, this hydrating</p>
+                  <div class="product-buy">
+                    <p class="product-price">
+                      Price: $09.00
+                    </p>
+                    <a class="btn btn-default" href="#">add to cart</a>
+                  </div><!-- /.product-buy -->
+                </div><!-- /.product -->
+              </div>
+            </div><!-- /.products-row -->
+
+            <h3>Featured Items</h3>
+            <div class="products-row clearfix">
+              <div class="col-sm-4">
+                <div class="product">
+                  <div class="product-sale img-circle">
+                    <span>Sale</span>
+                  </div>
+                  <div class="product-img">
+                    <a href="#"><img src="{% static "img/kudl2/goods4.jpg" %}" alt="CREAM JANE JEANS DRESS"></a>
+                  </div>
+                  <p class="product-title">
+                    <a href="#">Cream sissi tunic</a>
+                  </p>
+                  <p class="product-desc">
+                    Lightweight with just a hint of sheer color, this hydrating
+                  </p>
+                  <div class="product-buy">
+                    <p class="product-price">
+                      Price: $20.00
+                    </p>
+                    <a href="#" class="btn btn-default">Add to cart</a>
+                  </div>
+                </div><!-- /.product -->
+              </div><!-- .col-sm-4 -->
+              <div class="col-sm-4">
+                <div class="product">
+                  <div class="product-img">
+                    <a href="#"><img src="{% static "img/kudl2/goods5.jpg" %}" alt="CREAM JANE JEANS DRESS"></a>
+                  </div>
+                  <p class="product-title">
+                    <a href="#">big doodle shawl - blue/black</a>
+                  </p>
+                  <p class="product-desc">
+                    Lightweight with just a hint of sheer color, this hydrating
+                  </p>
+                  <div class="product-buy">
+                    <p class="product-price">
+                      Price: $09.00
+                    </p>
+                    <a href="#" class="btn btn-default">Add to cart</a>
+                  </div>
+                </div><!-- /.product -->
+              </div><!-- .col-sm-4 -->
+              <div class="col-sm-4">
+                <div class="product">
+                  <div class="product-img">
+                    <a href="#"><img src="{% static "img/kudl2/goods6.jpg" %}" alt="CREAM JANE JEANS DRESS"></a>
+                  </div>
+                  <p class="product-title">
+                    <a href="#">big doodle shawl - blue/black</a>
+                  </p>
+                  <p class="product-desc">
+                    Lightweight with just a hint of sheer color, this hydrating
+                  </p>
+                  <div class="product-buy">
+                    <p class="product-price">
+                      Price: $09.00
+                    </p>
+                    <a href="#" class="btn btn-default">Add to cart</a>
+                  </div>
+                </div><!-- /.product -->
+              </div><!-- .col-sm-4 -->
+            </div><!-- .products-row -->
+            <div class="banner-row clearfix">
+              <div class="col-sm-4">
+                <a href=""><img src="{% static "img/kudl2/content-banner1.jpg" %}"></a>
+              </div>
+              <div class="col-sm-4">
+                <a href=""><img src="{% static "img/kudl2/content-banner2.jpg" %}"></a>
+              </div>
+              <div class="col-sm-4">
+                <a href=""><img src="{% static "img/kudl2/content-banner3.jpg" %}"></a>
+              </div>
+            </div><!-- .banner-row -->
+            <h3>Latest Arrivals</h3>
+            <div class="products-row clearfix">
+              <div class="col-sm-4">
+                <div class="product">
+                  <div class="product-sale img-circle">
+                    <span>Sale</span>
+                  </div>
+                  <div class="product-img">
+                    <a href="#"><img src="{% static "img/kudl2/goods7.jpg" %}" alt="CREAM JANE JEANS DRESS"></a>
+                  </div>
+                  <p class="product-title">
+                    <a href="#">Cream sissi tunic</a>
+                  </p>
+                  <p class="product-desc">
+                    Lightweight with just a hint of sheer color, this hydrating
+                  </p>
+                  <div class="product-buy">
+                    <p class="product-price">
+                      Price: $20.00
+                    </p>
+                    <a href="#" class="btn btn-default">Add to cart</a>
+                  </div>
+                </div><!-- /.product -->
+              </div><!-- .col-sm-4 -->
+              <div class="col-sm-4">
+                <div class="product">
+                  <div class="product-img">
+                    <a href="#"><img src="{% static "img/kudl2/goods8.jpg" %}" alt="CREAM JANE JEANS DRESS"></a>
+                  </div>
+                  <p class="product-title">
+                    <a href="#">big doodle shawl - blue/black</a>
+                  </p>
+                  <p class="product-desc">
+                    Lightweight with just a hint of sheer color, this hydrating
+                  </p>
+                  <div class="product-buy">
+                    <p class="product-price">
+                      Price: $09.00
+                    </p>
+                    <a href="#" class="btn btn-default">Add to cart</a>
+                  </div>
+                </div><!-- /.product -->
+              </div><!-- .col-sm-4 -->
+              <div class="col-sm-4">
+                <div class="product">
+                  <div class="product-img">
+                    <a href="#"><img src="{% static "img/kudl2/goods9.jpg" %}" alt="CREAM JANE JEANS DRESS"></a>
+                  </div>
+                  <p class="product-title">
+                    <a href="#">big doodle shawl - blue/black</a>
+                  </p>
+                  <p class="product-desc">
+                    Lightweight with just a hint of sheer color, this hydrating
+                  </p>
+                  <div class="product-buy">
+                    <p class="product-price">
+                      Price: $09.00
+                    </p>
+                    <a href="#" class="btn btn-default">Add to cart</a>
+                  </div>
+                </div><!-- /.product -->
+              </div><!-- .col-sm-4 -->
+            </div><!-- .products-row -->
+          </div><!-- /.content -->
+        </div>
+        <div class="col-md-3 col-md-pull-9">
+          <div class="sidebar">
+            <div class="row">
+              <div class="col-xs-6 col-md-12">
+                <div class="widget">
+                  <h3>Popular Categories</h3>
+                  <ul>
+                    <li><a href="#">Performance Collection</a></li>
+                    <li><a href="#">Pants</a></li>
+                    <li><a href="#">Woven Shirts</a></li>
+                    <li><a href="#">Earth-Friendly Apparel</a></li>
+                    <li><a href="#">Sweatshirts</a></li>
+                    <li><a href="#">Infants</a></li>
+                    <li><a href="#">Shorts</a></li>
+                    <li><a href="#">Adult Essentials</a></li>
+                    <li class="more"><a href="#">Show More</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-6 col-md-12">
+                <div class="widget">
+                  <h3>Popular Brands</h3>
+                  <ul>
+                    <li><a href="#">Ashworth</a></li>
+                    <li><a href="#">Rabbit Skins</a></li>
+                    <li><a href="#">Izod</a></li>
+                    <li><a href="#">LAT</a></li>
+                    <li><a href="#">Authentic Pigment</a></li>
+                    <li><a href="#">Canvas</a></li>
+                    <li><a href="#">Apples & Oranges</a></li>
+                    <li><a href="#">OccuNomix</a></li>
+                    <li class="more"><a href="#">Show More</a></li>
+                  </ul>
+                </div><!-- .widget -->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 col-xs-6 text-center">
+
+                <div id="carousel-sidebar" class="carousel fade" data-ride="carousel">
+                  <!-- Indicators -->
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <img src="{% static "img/kudl2/slide-sidebar1.jpg" %}" alt="">
+                      <div class="sidebar-carousel-caption">
+                        <div>
+                          <h4>Fashion Colors for Women</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta nisi soluta voluptas.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="{% static "img/kudl2/slide-sidebar2.jpg" %}" alt="">
+                      <div class="sidebar-carousel-caption">
+                        <div>
+                          <h4>Fashion Colors for Women 2</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perspiciatis quaerat
+                            vitae!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="{% static "img/kudl2/slide-sidebar1.jpg" %}" alt="">
+                      <div class="sidebar-carousel-caption">
+                        <div>
+                          <h4>Fashion Colors for Women 3</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis enim id magnam
+                            unde.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-sidebar" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-sidebar" data-slide-to="1"></li>
+                    <li data-target="#carousel-sidebar" data-slide-to="2"></li>
+                  </ol>
+
+
+                </div>
+
+              </div>
+              <div class="col-md-12 col-xs-6 text-center">
+                <div class="banner">
+                  <img src="{% static "img/kudl2/banner.jpg" %}" alt="">
+                  <h3>introducing</h3>
+                  <h2>bombshell</h2>
+                  <h3>forever</h3>
+                  <a href="#" class="btn-red">shop now</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="about">
+              <h3>About Store</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore inventore obcaecati perferendis
+                provident quisquam rerum? Aperiam assumenda, cum dicta ducimus enim, incidunt iusto provident quia quis
+                rem, vero voluptatem!</p>
+              <p>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem enim eum porro quas quod, quos?</span>
+              </p>
+            </div>
+          </div><!-- /.sidebar -->
+        </div><!-- /.sidebar col-md-3 -->
+      </div>
+    </div>
+  </section><!-- /.main-content -->
+
+  <section class="bottom-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Get Discounts and Free Offers</h3>
+          <h4>Get free coupens, discounts and new arivals</h4>
+        </div>
+        <div class="col-md-8">
+          <form action="post" class="form-inline">
+            <div class="row">
+              <div class="form-group col-sm-4">
+                <input type="text" name="name" class="form-control" placeholder="your full name">
+              </div>
+              <div class="form-group col-sm-4">
+                <input type="email" name="email" class="form-control" placeholder="your email address">
+              </div>
+              <div class="form-group col-sm-4">
+								<button type="submit" class="btn btn-default">Subscribe</button>
+							</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
 {% endblock %}
 
